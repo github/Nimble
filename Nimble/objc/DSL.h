@@ -64,6 +64,14 @@ NIMBLE_EXPORT id<NMBMatcher> NMB_beFalsy();
 NIMBLE_SHORT(id<NMBMatcher> beFalsy(),
              NMB_beFalsy());
 
+NIMBLE_EXPORT id<NMBMatcher> NMB_beTrue();
+NIMBLE_SHORT(id<NMBMatcher> beTrue(),
+             NMB_beTrue());
+
+NIMBLE_EXPORT id<NMBMatcher> NMB_beFalse();
+NIMBLE_SHORT(id<NMBMatcher> beFalse(),
+             NMB_beFalse());
+
 NIMBLE_EXPORT id<NMBMatcher> NMB_beNil();
 NIMBLE_SHORT(id<NMBMatcher> beNil(),
              NMB_beNil());
@@ -79,6 +87,11 @@ NIMBLE_SHORT(id<NMBMatcher> endWith(id itemElementOrSubstring),
 NIMBLE_EXPORT NMBObjCRaiseExceptionMatcher *NMB_raiseException();
 NIMBLE_SHORT(NMBObjCRaiseExceptionMatcher *raiseException(),
              NMB_raiseException());
+
+NIMBLE_EXPORT id<NMBMatcher> NMB_match(id expectedValue);
+NIMBLE_SHORT(id<NMBMatcher> match(id expectedValue),
+             NMB_match(expectedValue));
+
 
 #ifndef NIMBLE_DISABLE_SHORT_SYNTAX
 #define expect(EXPR) NMB_expect(^id{ return (EXPR); }, __FILE__, __LINE__)
